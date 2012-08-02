@@ -19,7 +19,7 @@ function main()
 
 function count(html, search)
 {
-	int cnt = 0;
+	var cnt = 0;
 	var regex = new RegExp(search, "img");
 	var matches = [];
 	var match;
