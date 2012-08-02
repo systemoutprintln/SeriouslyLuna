@@ -2,20 +2,21 @@
 // ==UserScript==
 // @name           Project Serious
 // @namespace      http://www.reddit.com/r/SeriouslyLuna
-// @version        0.3
+// @version        0.4
 // @include        *
 // ==/UserScript==
 
 var SeriousLevels = [0,25,50,75];
 var SeriousColors = ['#40A040','#FFFF66','#FFA347','#FF3333'];
-var SeriousImages = [];
+var SeriousImages = ['http://i.imgur.com/L9xxf.png','http://i.imgur.com/5kHaD.png','http://i.imgur.com/6PhmI.png','http://i.imgur.com/oZvNo.png'];
+var SeriousMessage =['\'Tis Not Serious At All!','Not Sure If Serious','\'Tis Getting Serious','Seriously Luna?'];
 
 main();
 
 function main()
 {
     var html = document.getElementsByTagName('body')[0].innerHTML;
-	var search = "[serious(ly)?|srs(ly)?]";
+	var search = "[ serious(ly)? | srs(ly)? ]";
 	var c = count(html, search);
 	showPB(100);
 	advancePB(c);
@@ -46,14 +47,18 @@ var max;
 var cur;
 var progbar;
 var pbholder;
+var srstext;
+var srsimg;
 
 function showPB(nSteps)
 {
 	 var css = document.createElement("style");
     css.type = "text/css";
-    css.innerHTML = ".pbholder { position:fixed; height: 25px; width:100%; top: 0px; left: 0px; z-index: 99999; text-align:left;}\
+    css.innerHTML = ".pbholder { position:fixed; height: 85px; width:100%; top: 0px; left: 0px; z-index: 99999; text-align:left;}\
 	.pbar { position:fixed; height: 25px; top: 2px; left: 10%; -webkit-border-top-right-radius: 8px;	-webkit-border-bottom-right-radius: 8px; -moz-border-radius-topright: 8px;-moz-border-radius-bottomright: 8px;border-top-right-radius: 8px;border-bottom-right-radius: 8px;-webkit-border-top-left-radius: 8px;-webkit-border-bottom-left-radius: 8px;-moz-border-radius-topleft: 8px;-moz-border-radius-bottomleft: 8px;border-top-left-radius: 8px;border-bottom-left-radius: 8px;}\
-	.pbtext { posistion: fixed; background-color:white; top: 0px; margin-top:2px; left:2px; width:12%; font-size:20px; height: 23px;}";
+	.pbtext { posistion: fixed; background-color:white; top: 0px; margin-top:2px; left:10px; width:10%; font-size:20px; height: 25px;}\
+	.srstext {posistion: fixed; top: 25px; margin-top:2px; height: 30px;font-size:30px;text-align:center;}\
+	.srsimg {posistion: fixed; top:27px;right:2px;border-style:solid; border-width:2px;width:130px;height:130px;}";
     document.body.appendChild(css);
 	
 	pbholder = document.createElement("div");
@@ -68,11 +73,17 @@ function showPB(nSteps)
 	progbar.style.width = "0%";
 	
 	var pbtext = document.createElement("div");
-	pbtext.innerHTML = "Seriousness";
+	pbtext.innerHTML = "Seriousness:";
 	pbtext.className = "pbtext";
 	pbholder.appendChild(pbtext);
 	
+	srstext = document.createElement("div");
+	srstext.className = "srstext";
+	pbholder.appendChild(srstext);
 	
+	srsimg = document.createElement("div");
+	srsimg.className = "srsimg";
+	pbholder.appendChild(srsimg);
 	
 	max = nSteps;
 	cur = 0;
@@ -84,6 +95,8 @@ function advancePB(value)
 	var adv=value;
 	var inc=0;
 	var clr;
+	var txt;
+	var img;
 	var loadBar = setInterval(function() 
 	{
 		inc++;
@@ -102,6 +115,9 @@ function advancePB(value)
 			if(cur >= SeriousLevels[lvl])
 			{
 				clr = SeriousColors[lvl];
+				txt = SeriousMessage[lvl];
+				img = SeriousImages[lvl];
+				
 			}
 			else
 			{
@@ -112,6 +128,8 @@ function advancePB(value)
 		//console.log(inc);
 		progbar.style.width = res + "%";
 		progbar.style.backgroundColor = clr;
+		srstext.innerHTML = txt;
+		srsimg.backgroundImage= "url("+img+")";
 		
 		if(inc >= adv)
 		{
