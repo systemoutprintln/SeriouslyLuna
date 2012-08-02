@@ -106,7 +106,7 @@ function advancePB(value)
 			}
 			else
 			{
-				return;
+				break;
 			}
 			lvl++;
 		}
