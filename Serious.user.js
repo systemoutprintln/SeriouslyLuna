@@ -15,7 +15,7 @@ main();
 function main()
 {
     var html = document.getElementsByTagName('body')[0].innerHTML;
-	var search = "serious(ly)?";
+	var search = "[serious(ly)?|srs(ly)?]";
 	var c = count(html, search);
 	showPB(100);
 	advancePB(c);
@@ -39,9 +39,9 @@ function count(html, search)
 
 }
 
-///////////////////////////
-//		Progress Bar	//
-//////////////////////////
+/////////////\\\\\\\\\\\\\
+//		Progress Bar	\\
+/////////////\\\\\\\\\\\\\
 var max;
 var cur;
 var progbar;
@@ -53,7 +53,7 @@ function showPB(nSteps)
     css.type = "text/css";
     css.innerHTML = ".pbholder { position:fixed; height: 25px; width:100%; top: 0px; left: 0px; z-index: 99999; text-align:center;}\
 	.pbar { position:fixed; height: 25px; top: 2px; left: 10%; -webkit-border-top-right-radius: 8px;	-webkit-border-bottom-right-radius: 8px; -moz-border-radius-topright: 8px;-moz-border-radius-bottomright: 8px;border-top-right-radius: 8px;border-bottom-right-radius: 8px;-webkit-border-top-left-radius: 8px;-webkit-border-bottom-left-radius: 8px;-moz-border-radius-topleft: 8px;-moz-border-radius-bottomleft: 8px;border-top-left-radius: 8px;border-bottom-left-radius: 8px;}\
-	.pbtext { posistion: fixed; top: 2px; margin-top:0px; left:2px; width:10%; font-size:20px;}";
+	.pbtext { posistion: fixed; background-color:white; top: 2px; margin-top:0px; left:2px; width:10%; font-size:20px;}";
     document.body.appendChild(css);
 	
 	pbholder = document.createElement("div");
