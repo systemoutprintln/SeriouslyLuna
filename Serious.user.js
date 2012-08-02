@@ -67,11 +67,12 @@ function showPB(nSteps)
 	progbar.className = "pbar";
 	pbholder.appendChild(progbar);
 	progbar.style.width = "0%";
-	
+	/*
 	var pbtext = document.createElement("div");
 	pbtext.innerHTML = "Loading Emotes";
 	pbtext.className = "pbtext";
 	pbholder.appendChild(pbtext);
+	*/
 	
 	
 	max = nSteps;
@@ -107,8 +108,9 @@ function advancePB(value)
 			{
 				return;
 			}
+			lvl++;
 		}
-		
+		console.log(inc);
 		progbar.style.width = res + "%";
 		progbar.style.backgroundColor = clr;
 		
