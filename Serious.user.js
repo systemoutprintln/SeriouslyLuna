@@ -23,11 +23,11 @@ function count(html, search)
 	var regex = new RegExp(search, "img");
 	var matches = [];
 	var match;
-	match = regex.exec(text);
+	match = regex.exec(html);
 	while( match instanceof Array  ){
 		cnt++;
 	  matches.push(match);
-	  match = regex.exec(text);
+	  match = regex.exec(html);
 	}
 	Console.log("Resut:" + cnt);
 	return cnt;
