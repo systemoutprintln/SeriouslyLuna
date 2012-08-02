@@ -3,9 +3,7 @@
 // @name           Project Serious
 // @namespace      http://www.reddit.com/r/SeriouslyLuna
 // @version        0.3
-// @include        http://www.reddit.com/*
-// @include        http://reddit.com/*
-// @include        http://*.reddit.com/*
+// @include        *
 // ==/UserScript==
 
 var SeriousLevels = [0,25,50,75];
