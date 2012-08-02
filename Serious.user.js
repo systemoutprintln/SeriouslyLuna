@@ -53,7 +53,7 @@ function showPB(nSteps)
 	 var css = document.createElement("style");
     css.type = "text/css";
     css.innerHTML = ".pbholder { position:fixed; height: 25px; width:100%; top: 10px; left: 0px; z-index: 99999; text-align:center;}\
-	.pbar { position:fixed; height: 25px; bottom: 2px; left: 10%; -webkit-border-top-right-radius: 8px;	-webkit-border-bottom-right-radius: 8px; -moz-border-radius-topright: 8px;-moz-border-radius-bottomright: 8px;border-top-right-radius: 8px;border-bottom-right-radius: 8px;-webkit-border-top-left-radius: 8px;-webkit-border-bottom-left-radius: 8px;-moz-border-radius-topleft: 8px;-moz-border-radius-bottomleft: 8px;border-top-left-radius: 8px;border-bottom-left-radius: 8px;}\
+	.pbar { position:fixed; height: 25px; top: 2px; left: 10%; -webkit-border-top-right-radius: 8px;	-webkit-border-bottom-right-radius: 8px; -moz-border-radius-topright: 8px;-moz-border-radius-bottomright: 8px;border-top-right-radius: 8px;border-bottom-right-radius: 8px;-webkit-border-top-left-radius: 8px;-webkit-border-bottom-left-radius: 8px;-moz-border-radius-topleft: 8px;-moz-border-radius-bottomleft: 8px;border-top-left-radius: 8px;border-bottom-left-radius: 8px;}\
 	.pbtext { posistion: fixed; top: 0px; margin-top:5px}";
     document.body.appendChild(css);
 	
@@ -119,7 +119,7 @@ function advancePB(value)
 			clearInterval(loadBar);
 		}
 	
-	}, 10);
+	}, 50);
 }
 
 function hidePB()
