@@ -101,7 +101,7 @@ function advancePB(value)
 		{
 			if(cur >= SeriousLevels[lvl])
 			{
-				clr = SeriousColors[lvl]);
+				clr = SeriousColors[lvl];
 			}
 			else
 			{
