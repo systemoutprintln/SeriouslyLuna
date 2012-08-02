@@ -13,7 +13,7 @@ main();
 function main()
 {
     var html = document.getElementsByTagName('body')[0].innerHTML;
-	var search = "seriously";
+	var search = "serious(ly)?";
 	count(html, search);
 }
 
@@ -29,7 +29,7 @@ function count(html, search)
 	  matches.push(match);
 	  match = regex.exec(html);
 	}
-	Console.log("Resut:" + cnt);
+	console.log("Resut:" + cnt);
 	return cnt;
 
 }
