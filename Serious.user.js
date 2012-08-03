@@ -16,7 +16,7 @@ main();
 function main()
 {
     var html = document.getElementsByTagName('body')[0].innerHTML;
-	var search = "( serious(ly)? | srs(ly)? )";
+	var search = "(serious(ly)?|srs(ly)?)";
 	var c = count(html, search);
 	showPB(100);
 	advancePB(c);
@@ -144,11 +144,3 @@ function hidePB()
 {
 
 }
-
-///////////////////////////
-//		Emote Image		//
-//////////////////////////
-
-///////////////////////////
-//			Text		//
-//////////////////////////
