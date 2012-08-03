@@ -57,7 +57,7 @@ function showPB(nSteps)
     css.innerHTML = ".pbholder { position:fixed; height: 57px; width:100%; top: 0px; left: 0px; z-index: 99999; text-align:left;}\
 	.pbar { position:fixed; height: 23px; top: 2px; left: 10%; -webkit-border-top-right-radius: 8px;	-webkit-border-bottom-right-radius: 8px; -moz-border-radius-topright: 8px;-moz-border-radius-bottomright: 8px;border-top-right-radius: 8px;border-bottom-right-radius: 8px;-webkit-border-top-left-radius: 8px;-webkit-border-bottom-left-radius: 8px;-moz-border-radius-topleft: 8px;-moz-border-radius-bottomleft: 8px;border-top-left-radius: 8px;border-bottom-left-radius: 8px;}\
 	.pbtext { posistion: fixed; background-color:white; top: 0px; margin-top:2px; left:10px; width:15%; font-size:20px; height: 23px;}\
-	.srstext {posistion: fixed; top: 25px; margin-top:2px; height: 30px;font-size:30px;text-align:center;font-family:\"helvetica\"}\
+	.srstext {posistion: fixed; top: 25px; margin-top:2px; height: 30px;font-size:30px;text-align:center;font-family:Arial,Helvetica !important;}\
 	.srsimg {position:fixed; top:25px; right:2px !important; border-style:solid; border-width:2px; width:130px;height:130px;}\
 	body{margin-top:60px !important;}";
     document.body.appendChild(css);
