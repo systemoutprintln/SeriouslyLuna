@@ -15,11 +15,7 @@ main();
 
 function main()
 {
-	var link_e = document.createElement("div");
-	link_e.innerHTML = "Hide Serious Meter";
-	link_e.className = "hide";
-	link_e.onclick = hide;
-	document.body.appendChild(link_e);
+
 	
     var html = document.getElementsByTagName('body')[0].innerHTML;
 	var search = "(serious(ly)?|srs(ly)?)";
@@ -66,13 +62,19 @@ function showPB(nSteps)
 	.srstext {posistion: fixed; top: 25px; margin-top:2px; height: 30px;font-size:30px;text-align:center;font-family:Arial,Helvetica !important;}\
 	.srsimg {position:fixed; top:25px; right:2px !important; border-style:solid; border-width:2px; width:130px;height:130px;}\
 	body{margin-top:60px !important;}\
-	.hide{position:fixed; cursor:pointer; top:25px; left:2px !important; border-style:solid; border-width:2px; width: 100px; height: 25px; font-size:small; text-align:center;}";
+	.hide{position:fixed; cursor:pointer; top:27px; left:2px !important; border-style:solid; border-width:2px; width: 125px; height: 25px; font-size:10px; text-align:center;}";
     document.body.appendChild(css);
 	
 	pbholder = document.createElement("div");
 	pbholder.id = "pbholder";
 	pbholder.className = "pbholder";
 	document.body.appendChild(pbholder);
+	
+	var link_e = document.createElement("div");
+	link_e.innerHTML = "Hide Serious Meter";
+	link_e.className = "hide";
+	link_e.onclick = hide;
+	pbholder.appendChild(link_e);
 	
 	progbar = document.createElement("div");
 	progbar.id = "pbar";
