@@ -62,7 +62,7 @@ function showPB(nSteps)
 	.srstext {posistion: fixed; top: 25px; margin-top:2px; height: 30px;font-size:30px;text-align:center;font-family:Arial,Helvetica !important;}\
 	.srsimg {position:fixed; top:25px; right:2px !important; border-style:solid; border-width:2px; width:130px;height:130px;}\
 	body{margin-top:60px !important;}\
-	.hide{position:fixed; cursor:pointer; top:27px; left:2px !important; border-style:solid; border-width:2px; width: 125px; height: 25px; font-size:10px; text-align:center;}";
+	.hide{position:fixed; cursor:pointer; top:27px; left:2px !important; border-style:solid; border-width:2px; width: 125px; height: 25px; font-size:15px; text-align:center;}";
     document.body.appendChild(css);
 	
 	pbholder = document.createElement("div");
