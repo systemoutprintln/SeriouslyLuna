@@ -129,7 +129,7 @@ function advancePB(value)
 		progbar.style.width = res + "%";
 		progbar.style.backgroundColor = clr;
 		srstext.innerHTML = txt;
-		srsimg.style.background = "url("+img+") bottom right no-repeat";
+		srsimg.style.background = "url("+img+") bottom left no-repeat";
 		console.log(srsimg.backgroundImage);
 		
 		if(inc >= adv)
