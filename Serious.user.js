@@ -9,7 +9,7 @@
 var SeriousLevels = [0,25,50,75];
 var SeriousColors = ['#40A040','#FFFF66','#FFA347','#FF3333'];
 var SeriousImages = ['http://i.imgur.com/L9xxf.png','http://i.imgur.com/5kHaD.png','http://i.imgur.com/6PhmI.png','http://i.imgur.com/oZvNo.png'];
-var SeriousMessage =['\'Tis Not Serious At All!','Not Sure If Serious','\'Tis Getting Serious','Seriously Luna?'];
+var SeriousMessage =['\'Tis Not Serious At All!','Not Sure If Serious','\'Tis Getting Serious','Dat Seriousness'];
 
 main();
 
