@@ -15,6 +15,12 @@ main();
 
 function main()
 {
+	var link_e = document.createElement("div");
+	link_e.innerHTML = "Hide Serious Meter";
+	link_e.className = "hide";
+	link_e.onclick = hide;
+	document.body.appendChild(link_e);
+	
     var html = document.getElementsByTagName('body')[0].innerHTML;
 	var search = "(serious(ly)?|srs(ly)?)";
 	var c = count(html, search);
@@ -59,7 +65,8 @@ function showPB(nSteps)
 	.pbtext { posistion: fixed; background-color:white; top: 0px; margin-top:2px; left:10px; width:15%; font-size:20px; height: 23px;}\
 	.srstext {posistion: fixed; top: 25px; margin-top:2px; height: 30px;font-size:30px;text-align:center;font-family:Arial,Helvetica !important;}\
 	.srsimg {position:fixed; top:25px; right:2px !important; border-style:solid; border-width:2px; width:130px;height:130px;}\
-	body{margin-top:60px !important;}";
+	body{margin-top:60px !important;}\
+	.hide{top:25px; left:2px !important; border-style:solid; border-width:2px; width: 100 px; height: 25px; font-size:20px; text-align:center;}";
     document.body.appendChild(css);
 	
 	pbholder = document.createElement("div");
@@ -141,7 +148,14 @@ function advancePB(value)
 	}, 50);
 }
 
-function hidePB()
+function hide()
 {
+try{
+document.body.removeChild(pbholder);
+}
+catch(e)
+{
+
+}
 
 }
